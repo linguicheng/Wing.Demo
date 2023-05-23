@@ -12,7 +12,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Wing;
 
-namespace _1._2._1_1
+namespace _1._2._1
 {
     public class Startup
     {

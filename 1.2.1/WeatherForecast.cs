@@ -1,6 +1,6 @@
 using System;
 
-namespace _1._2._1_1
+namespace _1._2._1
 {
     public class WeatherForecast
     {
