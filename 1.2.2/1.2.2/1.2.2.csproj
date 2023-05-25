@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>_1._2._2</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Wing.Consul" Version="0.8.0" />
+    <PackageReference Include="Wing.SqlServer" Version="0.8.0" />
+    <PackageReference Include="Wing.UI" Version="0.8.1" />
+  </ItemGroup>
+
+
+</Project>

@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Wing;
 
-namespace _1._2._1
+namespace _1._2._2
 {
     public class Program
     {
