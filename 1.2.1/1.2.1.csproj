@@ -6,8 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Wing" Version="0.8.0" />
+    <None Remove="Protos\greet.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.40.0" />
     <PackageReference Include="Wing.Consul" Version="0.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
   </ItemGroup>
 
 

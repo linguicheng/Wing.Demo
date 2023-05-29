@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+﻿using _1._2._3;
+using Grpc.Net.Client;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Wing.ServiceProvider;
 
 namespace _1._2._1.Controllers
 {
@@ -15,12 +17,11 @@ namespace _1._2._1.Controllers
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
+        private readonly IServiceFactory _serviceFactory;
 
-        private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(IServiceFactory serviceFactory)
         {
-            _logger = logger;
+            _serviceFactory = serviceFactory;
         }
 
         [HttpGet]
@@ -34,6 +35,18 @@ namespace _1._2._1.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpGet("hello")]
+        public Task<string> SayHello()
+        {
+            return _serviceFactory.InvokeAsync("Wing.Demo_1.2.3", async serviceAddr =>
+            {
+                var channel = GrpcChannel.ForAddress(serviceAddr.ToString());
+                var greeterClient = new Greeter.GreeterClient(channel);
+                var result = await greeterClient.SayHelloAsync(new HelloRequest { Name = "Wing" });
+                return result.Message;
+            });
         }
     }
 }

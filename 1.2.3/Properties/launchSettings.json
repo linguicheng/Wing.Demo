@@ -3,7 +3,7 @@
     "1.2.3": {
       "commandName": "Project",
       "launchBrowser": false,
-      "applicationUrl": "https://localhost:1231;http://localhost:1230",
+      "applicationUrl": "http://localhost:1230",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
