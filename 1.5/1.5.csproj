@@ -6,10 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Wing.Consul" Version="0.8.0" />
-    <PackageReference Include="Wing.Gateway" Version="0.8.2" />
-    <PackageReference Include="Wing.RabbitMQ" Version="0.8.0" />
-    <PackageReference Include="Wing.SqlServer" Version="0.8.0" />
+    <PackageReference Include="Wing.Consul" Version="0.8.6" />
+    <PackageReference Include="Wing.Gateway" Version="0.8.6" />
+    <PackageReference Include="Wing.RabbitMQ" Version="0.8.6" />
+    <PackageReference Include="Wing.SqlServer" Version="0.8.6" />
   </ItemGroup>
 
 
