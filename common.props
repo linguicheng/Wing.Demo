@@ -1,0 +1,8 @@
+﻿<Project>
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Wing.Consul" Version="0.8.7" />
+  </ItemGroup>
+</Project>

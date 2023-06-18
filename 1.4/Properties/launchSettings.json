@@ -1,6 +1,6 @@
 ﻿{
   "profiles": {
-    "1.2.3": {
+    "1.4": {
       "commandName": "Project",
       "launchBrowser": false,
       "applicationUrl": "http://localhost:1410",

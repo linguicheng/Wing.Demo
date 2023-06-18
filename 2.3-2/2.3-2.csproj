@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <RootNamespace>_2._3_2</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="..\common.props" />
+
+
+</Project>
