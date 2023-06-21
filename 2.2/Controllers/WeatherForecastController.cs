@@ -57,7 +57,7 @@ namespace _2._2.Controllers
         [HttpGet]
         public void LoadBalance()
         {
-            Parallel.For(0, 10, async x =>
+            Parallel.For(0, 500, async x =>
             {
                 await _serviceFactory.InvokeAsync("Wing.Demo_2.3", async serviceAddr =>
                 {
@@ -76,17 +76,16 @@ namespace _2._2.Controllers
                     {
                         Interlocked.Increment(ref count3);
                     }
-                    _logger.LogInformation($"count1:{count1}，count2：{count2}，count3：{count3}");
+                    _logger.LogInformation($"请求示例2.3-1次数:{count1}，请求示例2.3-2次数：{count2}，请求示例2.3-3次数：{count3}");
                     if (response.StatusCode == System.Net.HttpStatusCode.OK)
                     {
-                        _logger.LogInformation($"第{x}次请求，结果：{await response.Content.ReadAsStringAsync()}");
+                        _logger.LogInformation($"第{x + 1}次请求，结果：{await response.Content.ReadAsStringAsync()}");
                     }
                     else
                     {
-                        _logger.LogInformation($"第{x}次请求，状态码：{response.StatusCode}");
+                        _logger.LogInformation($"第{x + 1}次请求，状态码：{response.StatusCode}");
                     }
                 });
-
             });
         }
     }

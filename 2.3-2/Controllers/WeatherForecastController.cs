@@ -40,8 +40,8 @@ namespace _2._3_2.Controllers
         [HttpGet]
         public string Test()
         {
-            Thread.Sleep(500);
-            return "我是实例 2.3-2";
+            Thread.Sleep(6000);
+            return "我是示例 2.3-2";
         }
     }
 }

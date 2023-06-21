@@ -41,7 +41,7 @@ namespace _2._3_1.Controllers
         public string Test()
         {
             Thread.Sleep(10000);
-            return "我是实例 2.3-1";
+            return "我是示例 2.3-1";
         }
     }
 }

@@ -39,7 +39,7 @@ namespace _2._3_3.Controllers
         [HttpGet]
         public string Test()
         {
-            return "我是实例 2.3-3";
+            return "我是示例 2.3-3";
         }
     }
 }
