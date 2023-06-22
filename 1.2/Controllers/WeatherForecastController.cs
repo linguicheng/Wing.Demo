@@ -34,7 +34,6 @@ namespace _1._2.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            Thread.Sleep(5000);
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
