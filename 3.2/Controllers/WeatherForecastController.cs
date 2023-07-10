@@ -3,9 +3,10 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
-namespace _3._2_1.Controllers
+namespace _3._2.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -23,17 +24,17 @@ namespace _3._2_1.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpGet("Breaker1")]
+        public string Breaker1()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            Thread.Sleep(120 * 1000);
+            return "我是Breaker1";
+        }
+        [HttpGet("Breaker2/{name}")]
+        public string Breaker2(string name)
+        {
+            Thread.Sleep(120 * 1000);
+            return $"我是Breaker2，name：{name}";
         }
     }
 }

@@ -1,9 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_3._2_1</RootNamespace>
-  </PropertyGroup>
+	<Import Project="..\common.props" />
+
+	<ItemGroup>
+		<PackageReference Include="Wing.Gateway" Version="0.8.7" />
+	</ItemGroup>
 
 
 </Project>
