@@ -9,5 +9,9 @@
     <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Update="Wing.Consul" Version="0.8.8-preview6" />
+  </ItemGroup>
+
 
 </Project>

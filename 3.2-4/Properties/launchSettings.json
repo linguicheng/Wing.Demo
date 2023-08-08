@@ -4,7 +4,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:3211",
+      "applicationUrl": "http://localhost:3241",
       "sslPort": 0
     }
   },
@@ -17,11 +17,11 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "_3._2_1": {
+    "_3._2_4": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "Wing.Demo_3.2/weatherforecast",
-      "applicationUrl": "http://localhost:3211",
+      "applicationUrl": "http://localhost:3241",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
