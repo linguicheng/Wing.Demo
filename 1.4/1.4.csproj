@@ -11,8 +11,4 @@
     <PackageReference Include="Grpc.AspNetCore" Version="2.40.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Update="Wing.Consul" Version="0.8.8-preview6" />
-  </ItemGroup>
-
 </Project>

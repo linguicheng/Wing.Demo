@@ -66,6 +66,8 @@ namespace Wing
             {
                 wingBuilder.Services.AddSingleton<IAuthorizationHandler, JwtAuthHandler>();
             }
+
+            wingBuilder.Services.AddSingleton(typeof(IAuth), new JwtAuth(config));
             return wingBuilder;
         }
     }
