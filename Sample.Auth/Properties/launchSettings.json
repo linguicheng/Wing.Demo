@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Sample.Auth": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:15714;http://localhost:15715"
+    }
+  }
+}
