@@ -5,6 +5,6 @@ namespace _5._2.Service
 {
     public interface IFreeSqlDemoService
     {
-        Task<int> Add(FreeSqlDemo tracer);
+        Task<int> Add(FreeSqlDemo entity);
     }
 }

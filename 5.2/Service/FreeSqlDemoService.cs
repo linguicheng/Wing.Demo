@@ -11,9 +11,9 @@ namespace _5._2.Service
         {
             _fsql = fsql;
         }
-        public Task<int> Add(FreeSqlDemo tracer)
+        public Task<int> Add(FreeSqlDemo entity)
         {
-            return _fsql.Insert(tracer).ExecuteAffrowsAsync();
+            return _fsql.Insert(entity).ExecuteAffrowsAsync();
         }
     }
 }
