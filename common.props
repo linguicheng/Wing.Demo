@@ -3,6 +3,6 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Wing.Consul" Version="0.8.8" />
+    <PackageReference Include="Wing.Consul" Version="0.9.0" />
   </ItemGroup>
 </Project>
