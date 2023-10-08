@@ -19,7 +19,7 @@ namespace _4._2_1
         [HttpGet]
         public string Get(string name)
         {
-            Saga.Start("Saga-Wing.Demo_4.2.1", new SagaOptions { TranPolicy = TranPolicy.Backward })
+            Saga.Start("Saga-Wing.Demo_4.2.1", new SagaOptions { TranPolicy = TranPolicy.Forward })
                  .Then(new SampleSagaUnit1(), new SampleUnitModel { Name = "事务单元1", HelloName = name })
                  .Then(new SampleSagaUnit2(), new SampleUnitModel { Name = "事务单元2", HelloName = name })
                  .Then(new SampleSagaUnit3(), new SampleUnitModel { Name = "事务单元3", HelloName = name })
