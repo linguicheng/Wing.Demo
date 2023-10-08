@@ -6,6 +6,7 @@ using Wing.Saga.Client;
 using Wing.ServiceProvider;
 using Newtonsoft.Json;
 using Wing.Result;
+using System.Text;
 
 namespace Saga.Bank.ABC.TransferSagaUnits
 {
@@ -28,7 +29,7 @@ namespace Saga.Bank.ABC.TransferSagaUnits
             {
                 var client = _httpClientFactory.CreateClient();
                 client.BaseAddress = new Uri(serviceAddr.ToString());
-                var response = await client.PostAsync("/TransferReceive", new StringContent(JsonConvert.SerializeObject(model)));
+                var response = await client.PostAsync("/TransferReceive", new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json"));
                 var sagaResult = new SagaResult();
                 if (response.IsSuccessStatusCode)
                 {

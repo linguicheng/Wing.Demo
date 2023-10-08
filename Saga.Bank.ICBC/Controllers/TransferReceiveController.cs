@@ -52,7 +52,7 @@ namespace Saga.Bank.ICBC.Controllers
             }
             if (!_result)
             {
-                return false;
+                throw new Exception("跨行转账业务失败！");
             }
             MyAccount.Balance += model.Amount;
             return true;
