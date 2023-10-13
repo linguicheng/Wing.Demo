@@ -1,8 +1,10 @@
 ﻿<Project>
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Wing.Consul" Version="0.9.2-preview1" />
+    <PackageReference Include="Wing.Consul" Version="1.0.0-preview1" />
   </ItemGroup>
 </Project>

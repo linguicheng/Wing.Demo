@@ -1,21 +1,13 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
 using Wing;
 
-namespace _3._2_3
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
+var builder = WebApplication.CreateBuilder(args);
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                }).AddWing(builder => builder.AddConsul());
-    }
-}
+builder.Host.AddWing(builder => builder.AddConsul());
+
+builder.Services.AddControllers();
+
+builder.Services.AddWing().AddGateWay();
+
+var app = builder.Build();
+
+app.Run();

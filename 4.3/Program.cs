@@ -1,21 +1,32 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
+using Sample.Auth;
 using Wing;
+using Wing.Saga.Server;
 
-namespace Sample.Saga.Server
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
+var builder = WebApplication.CreateBuilder(args);
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                }).AddWing(builder => builder.AddConsul());
-    }
-}
+builder.Host.AddWing(builder => builder.AddConsul());
+
+builder.Services.AddControllers();
+
+builder.Services.AddWing()
+                    .AddJwt()
+                    .AddPersistence()
+                    .AddEventBus()
+                    .AddSaga(serviceProvider =>
+                    {
+                        var token = $"Bearer {serviceProvider.GetRequiredService<IAuth>().GetToken()}";
+                        return new SagaOptions
+                        {
+                            Headers = new Dictionary<string, string> { { "Authorization", token } }
+                        };
+                    });
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+
+app.UseHttpsRedirection();
+
+app.MapControllers();
+
+app.Run();

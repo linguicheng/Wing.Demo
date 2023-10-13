@@ -77,5 +77,11 @@ namespace _1._2.Controllers
             });
 
         }
+
+        [HttpPost]
+        public WeatherForecast Post(WeatherForecast model)
+        {
+            return model;
+        }
     }
 }

@@ -1,27 +1,34 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Sample.Auth;
 using Wing;
+using Wing.Saga.Server;
 
-namespace Saga.Bank.Server
-{
-    public class Program
-    {
-        public static void Main(string[] args)
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.AddWing(builder => builder.AddConsul());
+
+builder.Services.AddControllers();
+
+builder.Services.AddWing()
+        .AddJwt()
+        .AddPersistence()
+        .AddEventBus()
+        .AddSaga(serviceProvider =>
         {
-            CreateHostBuilder(args).Build().Run();
-        }
+            var token = $"Bearer {serviceProvider.GetRequiredService<IAuth>().GetToken()}";
+            return new SagaOptions
+            {
+                Headers = new Dictionary<string, string> { { "Authorization", token } }
+            };
+        });
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                }).AddWing(builder => builder.AddConsul());
-    }
-}
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();

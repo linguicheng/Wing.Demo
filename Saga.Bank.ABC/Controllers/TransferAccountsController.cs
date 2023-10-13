@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
-using Microsoft.Extensions.Logging;
 using Saga.Bank.ABC.TransferSagaUnits;
 using System;
 using Wing.Persistence.Saga;
