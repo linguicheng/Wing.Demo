@@ -3,8 +3,8 @@
   <Import Project="..\common.props" />
 
   <ItemGroup>
-    <PackageReference Include="Wing.APM" Version="1.0.0-preview2" />
-    <PackageReference Include="Wing.SqlServer" Version="1.0.0-preview2" />
+    <PackageReference Include="Wing.APM" Version="1.0.0" />
+    <PackageReference Include="Wing.SqlServer" Version="1.0.0" />
   </ItemGroup>
 
 

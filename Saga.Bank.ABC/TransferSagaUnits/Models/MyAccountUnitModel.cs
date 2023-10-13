@@ -1,9 +1,7 @@
-﻿using System;
-using Wing.Saga.Client;
+﻿using Wing.Saga.Client;
 
 namespace Saga.Bank.ABC.TransferSagaUnits
 {
-    [Serializable]
     public class MyAccountUnitModel : UnitModel
     {
         /// <summary>
