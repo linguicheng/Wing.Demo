@@ -9,8 +9,8 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.23" />
-    <PackageReference Include="Wing.APM.EFCore" Version="1.0.0-preview1" />
-    <PackageReference Include="Wing.SqlServer" Version="1.0.0-preview1" />
+    <PackageReference Include="Wing.APM.EFCore" Version="1.0.0-preview2" />
+    <PackageReference Include="Wing.SqlServer" Version="1.0.0-preview2" />
   </ItemGroup>
 	
 </Project>

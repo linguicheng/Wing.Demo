@@ -3,8 +3,8 @@
 	<Import Project="..\common.props" />
 
 	<ItemGroup>
-	  <PackageReference Include="Wing.RabbitMQ" Version="1.0.0-preview1" />
-	  <PackageReference Include="Wing.Saga.Client" Version="1.0.0-preview1" />
+	  <PackageReference Include="Wing.RabbitMQ" Version="1.0.0-preview2" />
+	  <PackageReference Include="Wing.Saga.Client" Version="1.0.0-preview2" />
 	</ItemGroup>
 
 
