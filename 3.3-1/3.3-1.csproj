@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Wing.Gateway" Version="1.2.1" />
+	  <PackageReference Include="Wing.SqlServer" Version="1.2.1" />
+	</ItemGroup>
+
+  <ItemGroup>
+	<ProjectReference Include="..\Sample.Auth\Sample.Auth.csproj" />
+  </ItemGroup>
+
+</Project>
