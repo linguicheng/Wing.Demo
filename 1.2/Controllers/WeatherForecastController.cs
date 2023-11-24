@@ -1,13 +1,6 @@
 ﻿using _1._4;
 using Grpc.Net.Client;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
 using Wing.ServiceProvider;
 
 namespace _1._2.Controllers

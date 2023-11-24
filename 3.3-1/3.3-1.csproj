@@ -7,8 +7,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Wing.Gateway" Version="1.2.1" />
-	  <PackageReference Include="Wing.SqlServer" Version="1.2.1" />
+	  <PackageReference Include="Wing.Gateway" Version="1.2.5" />
+	  <PackageReference Include="Wing.SqlServer" Version="1.2.5" />
 	</ItemGroup>
 
   <ItemGroup>
