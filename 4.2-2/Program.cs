@@ -12,7 +12,7 @@ builder.Services.AddGrpc(options =>
     options.MaxSendMessageSize = 1 * 1024 * 1024; // 1 MB
 });
 
-builder.Services.AddWing().AddSaga().AddEventBus().AddJwt();
+builder.Services.AddWing().AddPersistence().AddSaga().AddEventBus().AddJwt();
 
 var app = builder.Build();
 
