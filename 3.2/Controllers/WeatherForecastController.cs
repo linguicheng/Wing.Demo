@@ -135,5 +135,11 @@ namespace _3._2.Controllers
                 return await client.GetStringAsync("Wing.Demo_3.2/weatherforecast/AuthKey");
             });
         }
+
+        [HttpGet("CustomRoute/{name}")]
+        public string CustomRoute(string name)
+        {
+            return $"自定义路由测试：{name}";
+        }
     }
 }
