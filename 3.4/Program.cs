@@ -6,7 +6,7 @@ builder.Host.AddWing(builder => builder.AddConsul());
 
 builder.Services.AddControllers();
 
-builder.Services.AddWing().AddPersistence().AddGateWay();
+builder.Services.AddWing().AddGateWay();
 
 var app = builder.Build();
 
