@@ -141,5 +141,17 @@ namespace _3._2.Controllers
         {
             return $"自定义路由测试：{name}";
         }
+
+        [HttpGet("Aggregation1")]
+        public string Aggregation1()
+        {
+            return $"聚合服务测试1";
+        }
+
+        [HttpGet("Aggregation2")]
+        public string Aggregation2()
+        {
+            return $"聚合服务测试2";
+        }
     }
 }
