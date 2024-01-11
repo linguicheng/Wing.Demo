@@ -5,6 +5,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Wing.Consul" Version="1.5.0" />
+    <PackageReference Include="Wing.Consul" Version="1.6.0" />
   </ItemGroup>
 </Project>
