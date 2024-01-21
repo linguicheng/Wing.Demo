@@ -24,16 +24,19 @@ namespace _3._2.Controllers
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IServiceFactory _serviceFactory;
         private readonly IAuth _auth;
+        private readonly HttpContext _context;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger,
             IHttpClientFactory httpClientFactory,
             IServiceFactory serviceFactory, 
-            IAuth auth)
+            IAuth auth,
+            IHttpContextAccessor contextAccessor)
         {
             _logger = logger;
             _httpClientFactory = httpClientFactory;
             _serviceFactory = serviceFactory;
             _auth = auth;
+            _context = contextAccessor.HttpContext;
         }
 
         [HttpGet("Breaker1")]
@@ -118,6 +121,12 @@ namespace _3._2.Controllers
             });
         }
 
+        [HttpGet("GetToken")]
+        public string GetToken()
+        {
+            return _auth.GetToken("Wing");
+        }
+
         [HttpGet("AuthKey")]
         public string AuthKey()
         {
@@ -152,6 +161,12 @@ namespace _3._2.Controllers
         public string Aggregation2()
         {
             return $"聚合服务测试2";
+        }
+
+        [HttpGet("JwtAuthPolicy")]
+        public string JwtAuthPolicy()
+        {
+            return $"我是JwtAuthPolicy，网关转发的请求头user-account:{_context.Request.Headers["user-account"]}";
         }
     }
 }

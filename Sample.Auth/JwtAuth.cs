@@ -1,5 +1,4 @@
-﻿using System;
-using System.IdentityModel.Tokens.Jwt;
+﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
@@ -20,7 +19,7 @@ namespace Sample.Auth
             var now = DateTime.UtcNow;
             var claims = new Claim[]
             {
-                    new Claim(ClaimTypes.Name, name),
+                    new Claim(ClaimTypes.NameIdentifier, name),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                     new Claim(JwtRegisteredClaimNames.Iat, now.ToUniversalTime().ToString(), ClaimValueTypes.Integer64),
             };

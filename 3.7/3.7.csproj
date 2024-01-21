@@ -1,4 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web"><PropertyGroup>  <UserSecretsId>9aee52e3-4042-4108-b00d-0529ce002f34</UserSecretsId>
+  </PropertyGroup>
 
 	<Import Project="..\common.props" />
 
