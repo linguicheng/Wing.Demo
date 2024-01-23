@@ -12,9 +12,9 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="Wing.RabbitMQ" Version="1.7.0" />
-		<PackageReference Include="Wing.Saga.Client" Version="1.7.0" />
-		<PackageReference Include="Wing.SqlServer" Version="1.7.0" />
+		<PackageReference Include="Wing.RabbitMQ" Version="1.7.1" />
+		<PackageReference Include="Wing.Saga.Client" Version="1.7.1" />
+		<PackageReference Include="Wing.SqlServer" Version="1.7.1" />
 	</ItemGroup>
 	
 	<ItemGroup>
