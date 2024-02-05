@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddWing()
         .AddJwt()
         .AddPersistence()
-        .AddEventBus()
+       // .AddEventBus()
         .AddSaga(serviceProvider =>
         {
             var token = $"Bearer {serviceProvider.GetRequiredService<IAuth>().GetToken()}";

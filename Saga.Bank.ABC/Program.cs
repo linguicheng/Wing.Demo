@@ -15,7 +15,7 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
     options.SuppressModelStateInvalidFilter = true;
 });
-builder.Services.AddWing().AddSaga().AddEventBus().AddJwt();
+builder.Services.AddWing().AddPersistence().AddSaga().AddEventBus().AddJwt();
 
 var app = builder.Build();
 
