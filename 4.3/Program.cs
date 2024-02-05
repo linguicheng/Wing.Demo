@@ -12,13 +12,13 @@ builder.Services.AddWing()
                     .AddJwt()
                     .AddPersistence()
                     //.AddEventBus()
-                    .AddSaga(serviceProvider =>
+                    .AddSaga(new SagaOptions
                     {
-                        var token = $"Bearer {serviceProvider.GetRequiredService<IAuth>().GetToken()}";
-                        return new SagaOptions
+                        Headers = () =>
                         {
-                            Headers = new Dictionary<string, string> { { "Authorization", token } }
-                        };
+                            var token = $"Bearer {App.GetRequiredService<IAuth>().GetToken()}";
+                            return new Dictionary<string, string> { { "Authorization", token } };
+                        }
                     });
 
 var app = builder.Build();
