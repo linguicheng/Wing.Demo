@@ -3,9 +3,9 @@
   <Import Project="..\common.props" />
 
   <ItemGroup>
-    <PackageReference Include="Wing.Gateway" Version="1.7.2" />
-    <PackageReference Include="Wing.RabbitMQ" Version="1.7.2" />
-    <PackageReference Include="Wing.SqlServer" Version="1.7.2" />
+    <PackageReference Include="Wing.Gateway" Version="1.9.2" />
+    <PackageReference Include="Wing.RabbitMQ" Version="1.9.2" />
+    <PackageReference Include="Wing.SqlServer" Version="1.9.2" />
   </ItemGroup>
 
 
