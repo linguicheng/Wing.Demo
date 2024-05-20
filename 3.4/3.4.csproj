@@ -3,7 +3,7 @@
 	<Import Project="..\common.props" />
 
 	<ItemGroup>
-		<PackageReference Include="Wing.Gateway" Version="1.9.6" />
+		<PackageReference Include="Wing.Gateway" Version="1.9.7" />
 	</ItemGroup>
 
 
