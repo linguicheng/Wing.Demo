@@ -77,6 +77,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.5", "3.5\3.5.csproj", "{3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.7", "3.7\3.7.csproj", "{BC96A675-606B-4DA9-A754-8C2A111C2520}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{29FF17A0-D8B6-4887-B3E0-E7F3D333D7A6}"
+	ProjectSection(SolutionItems) = preProject
+		common.props = common.props
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
