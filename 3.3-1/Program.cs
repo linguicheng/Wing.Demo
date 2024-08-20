@@ -6,7 +6,7 @@ builder.Host.AddWing(builder => builder.AddConsul());
 
 builder.Services.AddWing()
                     .AddJwt()
-                    .AddPersistence()
+                    .AddPersistence(FreeSql.DataType.SqlServer)
                     .AddGateWay(null,new WebSocketOptions
                     {
                         KeepAliveInterval = TimeSpan.FromMinutes(2)

@@ -1,7 +1,6 @@
 using _5._2.Service;
 using FreeSql;
 using Wing;
-using Wing.ServiceProvider;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +15,7 @@ var fsql = new FreeSqlBuilder()
 builder.Services.AddSingleton(typeof(IFreeSql), serviceProvider => fsql);
 builder.Services.AddScoped<IFreeSqlDemoService, FreeSqlDemoService>();
 builder.Services.AddWing()
-        .AddPersistence()
+        .AddPersistence(FreeSql.DataType.SqlServer)
         .AddAPM(x => x.AddFreeSql().Build(fsql));
 
 var app = builder.Build();

@@ -6,7 +6,7 @@ builder.Host.AddWing(builder => builder.AddConsul());
 
 builder.Services.AddControllers();
 
-builder.Services.AddWing().AddPersistence().AddAPM();
+builder.Services.AddWing().AddPersistence(FreeSql.DataType.SqlServer).AddAPM();
 
 var app = builder.Build();
 

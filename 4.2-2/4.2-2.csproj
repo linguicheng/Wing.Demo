@@ -12,9 +12,10 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="Wing.RabbitMQ" Version="1.10.4" />
-		<PackageReference Include="Wing.Saga.Client" Version="1.10.4" />
-		<PackageReference Include="Wing.SqlServer" Version="1.10.4" />
+		<PackageReference Include="Wing.RabbitMQ" Version="1.11.0" />
+		<PackageReference Include="Wing.Saga.Client" Version="1.11.0" />
+		<PackageReference Include="FreeSql.Provider.SqlServer" Version="3.2.833" />
+		<PackageReference Include="Wing.Persistence" Version="1.11.0" />
 	</ItemGroup>
 	
 	<ItemGroup>

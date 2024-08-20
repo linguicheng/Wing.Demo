@@ -3,8 +3,12 @@
   <Import Project="..\common.props" />
 
   <ItemGroup>
-    <PackageReference Include="Wing.SqlServer" Version="1.10.4" />
-    <PackageReference Include="Wing.UI" Version="1.10.4" />
+    <PackageReference Include="Wing.UI" Version="1.11.0" />
+	<PackageReference Include="FreeSql.Provider.SqlServer" Version="3.2.833" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sample.Auth\Sample.Auth.csproj" />
   </ItemGroup>
 
 

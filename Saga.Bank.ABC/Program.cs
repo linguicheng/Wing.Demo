@@ -15,7 +15,7 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
     options.SuppressModelStateInvalidFilter = true;
 });
-builder.Services.AddWing().AddPersistence().AddSaga().AddEventBus().AddJwt();
+builder.Services.AddWing().AddPersistence(FreeSql.DataType.SqlServer).AddSaga().AddEventBus().AddJwt();
 
 var app = builder.Build();
 

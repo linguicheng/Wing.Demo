@@ -7,7 +7,7 @@ builder.Host.AddWing(builder => builder.AddConsul());
 builder.Services.AddControllers();
 
 builder.Services.AddWing()
-                    .AddPersistence()
+                    .AddPersistence(FreeSql.DataType.SqlServer)
                     .AddGateWay();
                     //.AddEventBus() // 如果不想使用EventBus记录请求日志，可以删除此行代码;
 
